@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 39.6568 64"><symbol id="svg-bluetooth-animation">
+	<path d="m 4.793,17 30,30 -15,15 v -60 l 15,15 -30,30" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+	<g>
+		<rect id="svg-bluetooth-animation-r" x="0" y="32" width="4" height="4" stroke="none" transform="rotate(-45)" transform-origin="0 32">
+		</rect>
+		<use href="#svg-bluetooth-animation-r" transform="translate(34 0)"/>
+		<animate
+			id="svgBluetoothAnimationA"
+			attributeType="XML"
+			attributeName="display"
+			to="none"
+			begin="1s;svgBluetoothAnimationA.end+1s"
+			dur="1s"
+		/>
+	</g>
+</symbol><use href="#svg-bluetooth-animation" stroke="#5cc9ff" fill="#5cc9ff"/></svg>

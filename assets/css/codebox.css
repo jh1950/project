@@ -1,0 +1,91 @@
+.codebox {
+	--padding: .5rem;
+	--line-height: 1rem;
+	--bg-zIndex: 1;
+	--code-zIndex: 2;
+
+	background-color: var(--sub-bg-color);
+	border: 1px solid var(--bd-color);
+	border-radius: var(--gap-2);
+	position: relative;
+	line-height: var(--line-height);
+	width: 100%;
+	overflow: hidden;
+} .codebox .copy_area {
+	height: 0px;
+	width: 0px;
+	overflow: hidden;
+} .codebox + .codebox {
+	margin-top: 3rem;
+} .codebox-bg {
+	position: absolute;
+	top: var(--top, 0);
+	padding: var(--padding);
+	height: calc(var(--content-height) + var(--scrollbar-height));
+	width: 100%;
+	z-index: var(--bg-zIndex);
+} .codebox-highlight {
+	background-color: var(--theme-color);
+	position: absolute;
+	display: block;
+	height: var(--line-height);
+	width: 100%;
+	top: calc(var(--line, -1) * var(--line-height) + var(--padding)*1.5 + 1px);
+	left: 0;
+	opacity: .2;
+} .codebox code {
+	display: block;
+	position: relative;
+	z-index: var(--code-zIndex);
+} .codebox table {
+	display: block;
+	border-collapse: collapse;
+} .codebox-title {
+	background-color: var(--sub-bg-color);
+	display: flex;
+	border-bottom: 1px dashed var(--bd-color);
+	line-height: 1.5em;
+} .codebox-title> span {
+	flex: 1;
+	padding: 0 var(--padding);
+	text-align: left;
+} .codebox-title> span:before {
+	content: "</";
+	display: inline;
+} .codebox-title> span:after {
+	content: ">";
+	display: inline;
+} .codebox button {
+	background: transparent;
+	box-sizing: content-box;
+	border: 0;
+	border-right: 1px  solid var(--bd-color);
+	height: 1.5em;
+	width: var(--line-width, auto);
+	float: left;
+	cursor: pointer;
+} .codebox button svg {
+	padding: .25em;
+} .codebox button:hover svg {
+	--color: var(--theme-color);
+} .codebox tbody {
+	display: block;
+	white-space: nowrap;
+} .codebox tr {
+	display: flex;
+	position: relative;
+	max-height: 50vh;
+	overflow: hidden;
+} .codebox-line {
+	border-right: 1px solid var(--bd-color);
+	padding: var(--padding);
+	padding-bottom: var(--scrollbar-height);
+	text-align: right;
+} .codebox-line pre {
+	position: relative;
+	top: var(--top, 0);
+} .codebox-content {
+	flex: 1;
+	padding: var(--padding);
+	overflow: auto;
+}

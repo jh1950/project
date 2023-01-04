@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 64"><symbol id="svg-bluetooth">
+	<path d="m 2,17 30,30 -15,15 v -60 l 15,15 -30,30" fill="none" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</symbol><use href="#svg-bluetooth" stroke="#5cc9ff"/></svg>

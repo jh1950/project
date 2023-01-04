@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 56 53"><symbol id="svg-star">
+	<path id="svg-star-p" d="m 28,0 -11,25 11,9 11,-9 z" stroke="none"/>
+	<use href="#svg-star-p" transform="rotate(72)" transform-origin="28 29"/>
+	<use href="#svg-star-p" transform="rotate(144)" transform-origin="28 29"/>
+	<use href="#svg-star-p" transform="rotate(216)" transform-origin="28 29"/>
+	<use href="#svg-star-p" transform="rotate(288)" transform-origin="28 29"/>
+</symbol><use href="#svg-star" fill="#5cc9ff"/></svg>

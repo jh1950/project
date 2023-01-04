@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 46"><symbol id="svg-menu">
+	<path id="svg-menu-p" d="m 3,3 h 58" fill="none" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+	<use href="#svg-menu-p" transform="translate(0 20)"/>
+	<use href="#svg-menu-p" transform="translate(0 40)"/>
+</symbol><use href="#svg-menu" stroke="#5cc9ff"/></svg>

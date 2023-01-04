@@ -1,0 +1,111 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+} html {
+	background-color: var(--bg-color);
+	color: var(--color);
+	word-break: break-all;
+	word-wrap: break-word;
+	min-height: 100%;
+	display: flex;
+	scroll-behavior: smooth;
+} body {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	overflow: hidden auto;
+} #main {
+	flex: 1;
+}
+
+
+
+a {
+	color: var(--color);
+	text-decoration: none;
+	transition: color .1s;
+} a:hover {
+	--color: var(--theme-color);
+} ul {
+	list-style: none;
+} img, svg {
+	max-height: 100%;
+	max-width: 100%;
+} svg, svg> symbol + use {
+	transition: fill .1s, stroke .1s;
+} #content a {
+	--color: var(--theme-color);
+} #content a:hover {
+	border-bottom: 1px solid var(--color);
+}
+
+
+
+
+
+#header {
+	background-color: var(--bg-color);
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--gap);
+	box-shadow: 0 -10px 20px black;
+	position: sticky;
+	top: 0;
+	left: 0;
+	height: var(--header-height);
+	z-index: var(--header-zIndex);
+	white-space: nowrap;
+	overflow: hidden;
+} #site-title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 1rem;
+	height: 100%;
+} #mode-toggle {
+	--button-height: calc(var(--header-height) / 2);
+	--button-width: var(--button-height);
+	--box-height: calc(var(--button-height) / 2);
+	--box-width: calc(var(--button-width) * 1.25);
+
+	background: transparent;
+	border: 1px solid var(--bd-color);
+	border-radius: var(--box-height);
+	position: relative;
+	margin-right: var(--button-width);
+	height: var(--box-height);
+	width: var(--box-width);
+	cursor: pointer;
+	transition: background .5s;
+} #mode-toggle:before {
+	content: "";
+	box-sizing: border-box;
+	background-color: var(--sub-color);
+	border: 1px solid var(--bd-color);
+	border-radius: var(--box-height);
+	display: block;
+	position: absolute;
+	top: calc(var(--box-height) / -2 - 1px);
+	left: calc(var(--button-width) / -2);
+	height: var(--button-height);
+	width: var(--button-height);
+	transition: background .5s, left .5s;
+} #mode-toggle[aria-checked="true"] {
+	background-color: var(--theme-color-trans);
+} #mode-toggle[aria-checked="true"]:before {
+	left: calc(var(--box-width) - var(--box-height));
+	background-color: var(--theme-color);
+}
+
+
+
+#footer {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	min-height: var(--footer-height);
+	line-height: 2em;
+}

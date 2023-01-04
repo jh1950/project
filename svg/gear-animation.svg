@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><symbol id="svg-gear-animation">
+	<g transform-origin="center">
+		<circle r="16" cx="32" cy="32" fill="none" stroke-width="7"/>
+		<path id="svg-gear-animation-p" d="M 27,0 h 10 l 4,14 h -18 z" stroke="none"/>
+		<use href="#svg-gear-animation-p" transform-origin="center" transform="rotate(45)"/>
+		<use href="#svg-gear-animation-p" transform-origin="center" transform="rotate(90)"/>
+		<use href="#svg-gear-animation-p" transform-origin="center" transform="rotate(135)"/>
+		<use href="#svg-gear-animation-p" transform-origin="center" transform="rotate(180)"/>
+		<use href="#svg-gear-animation-p" transform-origin="center" transform="rotate(225)"/>
+		<use href="#svg-gear-animation-p" transform-origin="center" transform="rotate(270)"/>
+		<use href="#svg-gear-animation-p" transform-origin="center" transform="rotate(315)"/>
+		<animateTransform
+			attributeType="XML"
+			attributeName="transform"
+			type="rotate"
+			from="0"
+			to="360"
+			dur="8s"
+			repeatCount="indefinite"
+		/>
+	</g>
+</symbol><use href="#svg-gear-animation" fill="#5cc9ff" stroke="#5cc9ff"/></svg>

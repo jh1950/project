@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 54 64"><symbol id="svg-numberSign">
+	<g stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round">
+		<path id="svg-numberSign-p1" d="m 17,3 v 58" transform-origin="22 32" transform="rotate(11)"/>
+		<use href="#svg-numberSign-p1" transform="translate(20 0)"/>
+		<path id="svg-numberSign-p2" d="m 3,20 h 48"/>
+		<use href="#svg-numberSign-p2" transform="translate(0 24)"/>
+	</g>
+</symbol><use href="#svg-numberSign" stroke="#5cc9ff"/></svg>

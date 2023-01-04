@@ -1,0 +1,171 @@
+#main:not([class])> section {
+	display: none;
+} #main.home> section:not(#home) {
+	display: none;
+} #main.search> #content {
+	display: none;
+} #main> section:not(#home) {
+	margin: 3rem auto;
+	padding: 0 .5rem 3rem;
+	width: 100%;
+	max-width: var(--width);
+}
+
+
+
+#home {
+	background-color: var(--sub-bg-color);
+	padding: .5rem;
+} #home> *:not(form) {
+	display: none;
+} #home form {
+	--height: 1.5rem;
+
+	display: flex;
+	flex-direction: row-reverse;
+	gap: .5rem;
+	max-width: 100%;
+} #home input {
+	flex: 1;
+	background: transparent;
+	border: 0;
+	outline: 0;
+	height: var(--height);
+	width: 100%;
+	color: var(--color);
+	font-size: 1.25rem;
+} #home button {
+	background: transparent;
+	border: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .25em;
+	height: var(--height);
+	width: var(--height);
+	cursor: pointer;
+} #home button:hover {
+	--color: var(--theme-color);
+} #home ul li {
+	display: flex;
+	gap: .25em;
+} #home ul li:before {
+	content: '-';
+	display: inline;
+}
+
+#main.home #home {
+	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 3rem .5rem;
+	min-height: 400px;
+	font-size: 1.25em;
+} #main.home #home> *:not(form) {
+	display: block;
+} #main.home #home form {
+	--height: 3rem;
+
+	flex-flow: row wrap;
+	margin: 2em 0;
+} #main.home #home input {
+	border: 1px solid var(--bd-color);
+	border-radius: 1em;
+	padding: 0 .75em;
+	font-size: 1.15em;
+} #main.home #home input:focus {
+	border-color: var(--color);
+} #main.home #home button {
+	padding: .5em;
+} @media (min-width: 768px) {
+	#main.home #home {
+		min-height: 550px;
+		font-size: 1.5em;
+	}
+}
+
+
+
+#svg-table ul {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+}  #svg-table a, #content #svgbox .icon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--sub-bg-color);
+	border: 1px solid var(--bd-color);
+	border-radius: .5em;
+	padding: .5em;
+	height: 4em;
+	width: 4em;
+}
+
+
+
+
+
+#content {
+	border-bottom: 1px solid var(--bd-color);
+} #content #svgbox {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	margin-bottom: 2em;
+} #content #svgbox .icon {
+	margin: 0 auto;
+	font-size: 2em;
+} #content #svgbox .info {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+} #content #svgbox .info input {
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid var(--bd-color);
+	outline: 0;
+	color: var(--color);
+} #content #svgbox .info input:focus {
+	border-color: var(--color);
+} #content #svg-title {
+	border-bottom: 1px dashed var(--bd-color);
+	margin-bottom: .25em;
+	padding-bottom: .25em;
+	text-align: center;
+} #content #svgbox .info .tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: .25em .5em;
+	margin-top: .5em;
+	color: var(--sub-color);
+} #content select {
+	background: transparent;
+	border: 0;
+	border-bottom: 1px solid var(--bd-color);
+	margin-bottom: 1rem;
+	color: var(--color);
+} #content option {
+	background-color: var(--bg-color);
+} #codes {
+	position: fixed;
+	right: 200vw;
+} #codebox-container {
+} #codebox-container .code-info {
+	margin-bottom: 1em;
+} @media (min-width: 768px) {
+	#content #svgbox {
+		flex-direction: row;
+	} #content #svg-title {
+		text-align: left;
+		border-bottom-style: solid;
+	} #content #svgbox .info {
+	} #content #svgbox .info .tags {
+		flex: 1;
+		align-items: flex-end;
+	}
+}

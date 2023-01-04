@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><symbol id="svg-x">
+	<path id="svg-x-p" d="M 3,3 61,61 z" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+	<use href="#svg-x-p" transform="rotate(90)" transform-origin="center"/>
+</symbol><use href="#svg-x" stroke="#5cc9ff"/></svg>

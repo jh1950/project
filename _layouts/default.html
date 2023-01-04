@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+	<title>{{ page.title }} | {{ site.title }}</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=10, user-scalable=yes, shrink-to-fit=no"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<!-- <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script> -->
+
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/scrollbar.css"/>
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/define.css"/>
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/home.css"/>
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/msgbox.css"/>
+	<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/codebox.css"/>
+	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/index.js"></script>
+	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/home.js"></script>
+	<script type="text/javascript" src="{{ site.baseurl }}/assets/js/codebox.js"></script>
+</head>
+<body>
+	<div id="msgbox-container"><script type="text/javascript" src="{{ site.baseurl }}/assets/js/msgbox.js"></script></div>
+	<header id="header">
+		<a id="site-title" href="{{ site.baseurl }}/">SVG Share</a>
+		<script type="text/javascript" src="{{ site.baseurl }}/assets/js/header.js"></script>
+	</header>
+	<main id="main">
+		<section id="home">
+			<h1>Get the icon you want!</h1>
+			<p>Feel free to use it!</p>
+			<form method="get" action="{{ site.baseurl }}/">
+				<input name="search" placeholder="Search for icons..."/>
+				<button title="Search" type="submit"><svg viewBox="0 0 64 64"><use href="#svg-magnifier" stroke="var(--color)"/></svg></button>
+			</form>
+			<a style="font-size: .85em; border-bottom: 1px solid var(--color)" href="https://developer.mozilla.org/en-US/docs/Web/SVG" target="_blank">What is SVG?</a>
+		</section>
+		<section id="content">
+			<article id="svgbox">
+				<div class="icon"></div>
+				<div class="info"></div>
+			</article>
+			<select onchange="f_select(this);">
+				<option hidden select>Select</option>
+				<option value="0">filename.svg</option>
+				<option value="1">SVG in HTML</option>
+				<option value="2">SVG in HTML (Symbol)</option>
+			</select>
+			<article id="codebox-container"></article>
+			<article id="codes">
+				<div class="codebox-wrapper">
+					<div class="code-info">
+						Copy the code and save it as a .svg file.<br/>
+						It can be used like a image.
+					</div>
+					<div class="codebox" lang=".svg">
+&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="<span svg="viewBox"></span>"<span svg="fill-wrapper"> fill="<span svg="fill"></span>"</span><span svg="stroke-wrapper"> stroke="<span svg="stroke"></span>"</span><span svg="addAttr"></span>&gt;
+	<span svg="code"></span>
+&lt;/svg&gt;
+					</div>
+				</div>
+				<div class="codebox-wrapper">
+					<div class="code-info">Copy the code and insert it into the .html file.</div>
+					<div class="codebox" lang="HTML">
+&lt;svg viewBox="<span svg="viewBox"></span>"<span svg="fill-wrapper"> fill="<span svg="fill"></span>"</span><span svg="stroke-wrapper"> stroke="<span svg="stroke"></span>"</span><span svg="addAttr"></span>&gt;
+	<span svg="code"></span>
+&lt;/svg&gt;
+					</div>
+				</div>
+				<div class="codebox-wrapper">
+					<div class="code-info">
+						Copy the code and insert it into the .html file.<br/>
+						The &lt;symbol&gt; element is used to define graphical template objects which can be instantiated by a &lt;use&gt; element.<br/>
+						See <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Element/symbol" target="_blank">here</a> for more information.
+					</div>
+					<div class="codebox" lang="HTML">
+&lt;svg style="display: none;"<span svg="addAttr"></span>&gt;&lt;symbol id="svg-<span svg="name"></span>"&gt;
+	<span svg="code"></span>
+&lt;/symbol&gt;&lt;/svg&gt;
+
+&lt;svg viewBox="<span svg="viewBox"></span>"&gt;&lt;use href="#svg-<span svg="name"></span>"<span svg="fill-wrapper"> fill="<span svg="fill"></span>"</span><span svg="stroke-wrapper"> stroke="<span svg="stroke"></span>"</span>&gt;&lt;/use&gt;&lt;/svg&gt;
+					</div>
+				</div>
+			</article>
+		</section>
+		<section id="svg-table">
+			<ul>
+				<li><a href="{{ site.baseurl }}/?svg=arrow" role="button"><svg src="{{ site.baseurl }}/svg/arrow.svg"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=box" role="button"><svg src="{{ site.baseurl }}/svg/box.svg" tags="archive"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=bluetooth" role="button"><svg src="{{ site.baseurl }}/svg/bluetooth.svg" tags="wireless"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=bluetooth-animation" role="button"><svg src="{{ site.baseurl }}/svg/bluetooth-animation.svg" tags="animation wireless"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=bluetooth-paired" role="button"><svg src="{{ site.baseurl }}/svg/bluetooth-paired.svg" tags="wireless connected pairing"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=circle" role="button"><svg src="{{ site.baseurl }}/svg/circle.svg"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=clock" role="button"><svg src="{{ site.baseurl }}/svg/clock.svg" tags="time"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=clock-animation" role="button"><svg src="{{ site.baseurl }}/svg/clock-animation.svg" tags="animation time"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=copy" role="button"><svg src="{{ site.baseurl }}/svg/copy.svg"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=externalLink" role="button"><svg src="{{ site.baseurl }}/svg/externalLink.svg"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=flag" role="button"><svg src="{{ site.baseurl }}/svg/flag.svg"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=gear" role="button"><svg src="{{ site.baseurl }}/svg/gear.svg" tags="setting"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=gear-animation" role="button"><svg src="{{ site.baseurl }}/svg/gear-animation.svg" tags="animation setting"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=home" role="button"><svg src="{{ site.baseurl }}/svg/home.svg" tags="house"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=loading" role="button"><svg src="{{ site.baseurl }}/svg/loading.svg" tags="animation circle"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=menu" role="button"><svg src="{{ site.baseurl }}/svg/menu.svg" tags="hamburger"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=numberSign" role="button"><svg src="{{ site.baseurl }}/svg/numberSign.svg" tags="tag hashtag"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=pause" role="button"><svg src="{{ site.baseurl }}/svg/pause.svg"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=play" role="button"><svg src="{{ site.baseurl }}/svg/play.svg"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=magnifier" role="button"><svg src="{{ site.baseurl }}/svg/magnifier.svg" tags="search"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=magnifierMinus" role="button"><svg src="{{ site.baseurl }}/svg/magnifierMinus.svg" tags="search minus"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=magnifierPlus" role="button"><svg src="{{ site.baseurl }}/svg/magnifierPlus.svg" tags="search plus"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=star" role="button"><svg src="{{ site.baseurl }}/svg/star.svg"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=wifi" role="button"><svg src="{{ site.baseurl }}/svg/wifi.svg" tags="animation wireless"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=wifi-0" role="button"><svg src="{{ site.baseurl }}/svg/wifi-0.svg" tags="wireless"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=wifi-1" role="button"><svg src="{{ site.baseurl }}/svg/wifi-1.svg" tags="wireless"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=wifi-2" role="button"><svg src="{{ site.baseurl }}/svg/wifi-2.svg" tags="wireless"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=wifi-3" role="button"><svg src="{{ site.baseurl }}/svg/wifi-3.svg" tags="wireless"></svg></a></li>
+				<li><a href="{{ site.baseurl }}/?svg=x" role="button"><svg src="{{ site.baseurl }}/svg/x.svg" tags="close"></svg></a></li>
+			</ul>
+			<div hidden style="text-align: center; font-size: 1.5em;"><h1>Icons not found!</h1><p>Please search again.</p></div>
+		</section>
+	</main>
+	<footer id="footer">&copy; 1937009 김준희</footer>
+</body>
+</html>
